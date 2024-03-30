@@ -1,0 +1,176 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Global Styles */
+.bg-black {
+    background-image: url('/assets/Bg-1.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Ensure children are positioned relative to this container */
+}
+
+.text-white {
+    color: rgb(255, 255, 255);
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2; /* Ensure content appears above background */
+}
+
+.Judul {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #1150e4;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.Judul:hover {
+    color: #ffffff;
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+.body-content {
+    position: relative;
+    z-index: 1; /* Ensure content appears above background */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Add padding for better spacing */
+    max-width: 600px; /* Limit maximum width for better readability */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.profile-picture img {
+    width: 100%; /* Ensure image fills its container */
+    max-width: 280px; /* Limit maximum width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+    margin-bottom: 20px; /* Add margin for better spacing */
+}
+
+.content {
+    text-align: center; /* Center text */
+}
+
+.content-1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.content-1:hover {
+    color: #ffe925;
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+.content-2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.content-2:hover {
+    color: #ffe925;
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+.body-1 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap to next line if necessary */
+}
+
+.button-container button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 50px; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #4ce605;
+}
+
+.hi-me-button,
+.cv-button,
+.experience,
+.service {
+    background-color: #ffe925; 
+    color: rgb(109, 102, 102);
+    font-weight: bold;
+}
+
+.sosmed-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sosmed-container a {
+    margin: 0 10px;
+}
+
+.sosmed-container img {
+    border-radius: 50%;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 600px) {
+    .profile-picture img {
+        max-width: 100%; /* Ensure image fills its container on mobile */
+        border-radius: 10px; /* Decrease border radius for smaller screens */
+    }
+
+    .content {
+        text-align: center; /* Center text on mobile */
+    }
+
+    .content-1 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+
+    .content-2 {
+        font-size: 20px; /* Decrease font size for smaller screens */
+    }
+
+    .body-1 {
+        font-size: 16px; /* Decrease font size for smaller screens */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: center; /* Center buttons horizontally on mobile */
+    }
+
+    .button-container button {
+        margin: 5px 0; /* Adjust margin for better spacing on mobile */
+    }
+}

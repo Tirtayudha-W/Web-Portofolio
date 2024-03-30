@@ -1,0 +1,173 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Background Styles */
+.bg-black {
+    background-image: url('/assets/Bg-2.png');
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+/* Content Styles */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: rgba(41, 41, 41, 0.7);
+    box-shadow: 0 0 10px rgba(67, 66, 66, 0.3);
+    padding: 20px; /* Increased padding for better spacing */
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.home-button a {
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(52, 143, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+}
+
+.home-button a:hover {
+    background-color: rgb(144, 201, 255); /* Darker color on hover */
+    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow size on hover */
+}
+
+/* Title Styles */
+.Judul {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #1150e4;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.Judul:hover {
+    color: #ffffff;
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Body Content Styles */
+.body-content {
+    text-align: left; /* Align content to the left */
+}
+
+.content-1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.content-2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.body-1 {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Education Styles */
+.education-container {
+    display: flex;
+    justify-content: space-between; /* Align items next to each other */
+    align-items: flex-start;
+    margin-top: 20px; /* Added margin for better separation */
+}
+
+.education,
+.previous-education {
+    flex: 1;
+    border-radius: 10px;
+    background-color: rgba(17, 80, 228, 0.1);
+    box-shadow: 0 0 10px rgba(17, 80, 228, 0.3);
+    padding: 20px;
+    margin: 0 5px; /* Adjust margin for better spacing */
+}
+
+.education h3,
+.previous-education h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: yellow;
+}
+
+.education ul,
+.previous-education ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.education li,
+.previous-education li {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.education-separator {
+    width: 2px;
+    background-color: #1150e4;
+    margin: 0 20px;
+}
+
+/* Contact Information Styles */
+.contact-info {
+    margin-top: 45px;
+    color: rgb(0, 0, 0);
+}
+
+.contact-info ul {
+    list-style-type: none;
+}
+
+.contact-info li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.contact-info li img {
+    margin-right: 10px; /* Add spacing between icon and text */
+}
+
+/* Social Media Container Styles */
+.sosmed-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sosmed-container a {
+    margin: 0 10px;
+}
+
+.sosmed-container img {
+    border-radius: 50%;
+}
