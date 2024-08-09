@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -112,6 +112,68 @@ body {
     border-radius: 50%;
 }
 
+.certificates-container {
+    background-color: transparent; 
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certificates {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgb(0, 94, 245);
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificates:hover {
+    color: #030303;
+    background-color: rgb(255, 255, 255); /* Darker color on hover */
+    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow size on hover */
+}
+
+ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+h3 li {
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+h3 li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+h3 li:hover {
+    background-color: #e6f2ff;
+}
+
+h3 li a:hover {
+    color: #030303;
+}
+
+
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
     .projects-container {
@@ -119,6 +181,16 @@ body {
     }
     .project {
         width: calc(50% - 20px); /* Two projects per row on smaller screens */
+    }
+
+    .certificates-container {
+        background-color: transparent; 
+        padding: 20px;
+        border-radius: 12px;
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
 }
 

@@ -145,7 +145,7 @@ body {
 /* Media Query for Mobile */
 @media screen and (max-width: 600px) {
     .profile-picture img {
-        max-width: 100%; /* Ensure image fills its container on mobile */
+        max-width: 70%; /* Ensure image fills its container on mobile */
         border-radius: 10px; /* Decrease border radius for smaller screens */
     }
 

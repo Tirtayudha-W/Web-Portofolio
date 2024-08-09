@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .bg-black {
@@ -46,7 +46,9 @@ body {
 }
 
 .profile-picture img {
-    width: 100%;
+    position: relative;
+    right: 300px;
+    width: 200%;
     height: auto;
     border-radius: 25px;  
 }
@@ -87,4 +89,15 @@ body {
 
 .sosmed-container img {
     border-radius: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+    .profile-picture img {
+    position: center;
+    right: 100px;
+    width: 340px;
+    height: 100%;
+    height: auto;
+    border-radius: 25px;
+    }
 }

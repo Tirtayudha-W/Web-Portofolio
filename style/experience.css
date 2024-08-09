@@ -1,6 +1,5 @@
-/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -63,8 +62,8 @@ body {
 
 .project p {
     margin-top: 10px;
-    color: #666;
-    text-align: center
+    color: rgb(0, 0, 0);
+    text-align: justify;
 }
 
 .project img {
