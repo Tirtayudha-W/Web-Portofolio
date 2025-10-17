@@ -1,3 +1,6 @@
+/* ========================================================= */
+/* 🔹 Tampilan Umum */
+/* ========================================================= */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -9,17 +12,20 @@ body {
 .bg {
     background-image: url('/assets/Bg-1.jpg');
     background-size: cover;
+    background-position: center;
     min-height: 100vh; 
 }
 
+/* ========================================================= */
+/* 🔹 Judul */
+/* ========================================================= */
 .Judul {
     font-size: 38px;
     color: #1150e4;
     font-weight: bold;
-    position: absolute;
     text-align: center;
-    margin-bottom: 20px;
-    margin: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     transition: all 0.3s ease;
 }
 
@@ -28,51 +34,115 @@ body {
     transform: translateY(-5px);
 }
 
+/* ========================================================= */
+/* 🔹 Container dan Project */
+/* ========================================================= */
 .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* ✅ tampil menurun */
+    align-items: center;
     padding: 20px;
-    margin: 0px;
 }
 
 .project {
-    border-radius: 50px;
-    padding: 25px;
-    margin: 25px;
-    margin-block-start: 100px;
+    width: 50%;
+    max-width: 500px;
     background-image: linear-gradient(#afe7ff, transparent);
-    box-shadow: 20px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
-    width: calc(33.33% - 20px); /* Three projects per row */
-    max-width: 300px; /* Limit maximum width */
+    position: relative;
 }
 
 .project:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
 }
 
 .project h2 {
-    margin-top: 0;
-    font-size: 20px;
-    color: rgb(82, 82, 82);
+    font-size: 30px;
+    color: #333;
     font-weight: bold;
     text-align: center;
-}
-
-.project p {
-    margin-top: 10px;
-    color: rgb(0, 0, 0);
-    text-align: justify;
 }
 
 .project img {
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
 }
 
-/* Home button styles */
+.project p {
+    color: #000;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.caption {
+    font-size: 20px;
+}
+
+/* ========================================================= */
+/* 🔹 Tombol Selengkapnya */
+/* ========================================================= */
+.dropbtn {
+    margin-top: 15px;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropbtn:hover {
+    background-color: #0046b3;
+    transform: scale(1.05);
+}
+
+/* ========================================================= */
+/* 🔹 Gambar tambahan (Selengkapnya) */
+/* ========================================================= */
+.more-images {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* muncul di sisi kanan card */
+    width: 280px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 15px;
+    z-index: 10;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.more-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.more-images img:hover {
+    transform: scale(1.05);
+}
+
+.project.expanded .more-images {
+    display: flex; /* ✅ muncul di bawah project */
+}
+
+/* ========================================================= */
+/* 🔹 Tombol Home */
+/* ========================================================= */
 .home-button {
     position: absolute;
     top: 20px;
@@ -89,18 +159,21 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .home-button a:hover {
-    background-color: rgb(144, 201, 255); /* Darker color on hover */
-    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow size on hover */
+    background-color: rgb(144, 201, 255);
+    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* ========================================================= */
+/* 🔹 Sosial Media */
+/* ========================================================= */
 .sosmed-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 40px 0;
 }
 
 .sosmed-container a {
@@ -109,20 +182,50 @@ body {
 
 .sosmed-container img {
     border-radius: 50%;
+    width: 35px;
+    height: 35px;
 }
 
-/* Responsive adjustments */
+/* ========================================================= */
+/* 🔹 Responsiveness */
+/* ========================================================= */
+
+/* ✅ Untuk mobile: tampil ke bawah saja */
 @media only screen and (max-width: 768px) {
-    .projects-container {
-        padding: 10px;
-    }
-    .project {
-        width: calc(50% - 20px); /* Two projects per row on smaller screens */
-    }
+
+.project {
+    width: 90%;
+    padding: 20px;
 }
 
+/* ubah posisi .more-images jadi normal di bawah */
+.more-images {
+    position: static;
+    display: none;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.project.expanded .more-images {
+    display: flex;
+}
+
+.dropbtn {
+    width: 100%;
+}
+
+}
+
+/* Lebih kecil lagi */
 @media only screen and (max-width: 480px) {
-    .project {
-        width: calc(100% - 20px); /* Single project per row on smallest screens */
+    .Judul {
+        font-size: 26px;
+    }
+
+    .caption {
+        font-size: 16px;
     }
 }

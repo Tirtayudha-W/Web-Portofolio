@@ -13,44 +13,110 @@
             <div class="projects-container">
                 <div class="Judul">About My Experience📝</div>
                 <div class="project">
-                    <h2>Natural Beauty in Indonesia🌴</h2>
-                    <a href="https://github.com/Tirtayudha-W/Pweb-">
-                        <img src="/assets/beauty-indo.png" alt="beauty-indo">
+                    <h2>Kataloglokal 🍜👘🪭</h2>
+                    <a href="https://github.com/Tirtayudha-W/Simple-chatbot" target="_blank">
+                      <img src="/assets/Kataloglokal.png" alt="kataloglokal" class="main-img">
                     </a>
-                    <p class="caption">This project is a portfolio website that introduces the natural 
-                        beauty of Indonesia which has become a tourist spot and is being preserved.</p>
-                </div>
-                <div class="project">
-                    <h2>💄Kembang Ayu💋</h2>
-                    <a href="https://github.com/adityaprimukti/Kembang_Ayu.git">
-                        <img src="/assets/Kembang-ayu.png" alt="Kembang-ayu">
-                    </a>
-                    <p class="caption">This project is one of the final projects in the MSIB Batch 6 activities that I have participated in at Celerates, 
-                    and this website is especially helpful for women and men who like to go on vacation and need beauty treatments.</p>
-                </div>
-                <div class="project">
-                    <h2>EduYou📖</h2>
+                  
+                    <!-- Gambar tambahan yang akan disembunyikan dulu -->
+                    <div class="more-images" style="display: none;">
+                      <img src="/assets/Kataloglokal2.png" alt="kataloglokal">
+                      <img src="/assets/KatalogLokal3.png" alt="kataloglokal">
+                    </div>
+                  
+                    <!-- Tombol Selengkapnya -->
+                    <button class="dropbtn" onclick="toggleImages(this)">Selengkapnya ⬇️</button>
+                  
+                    <p class="caption">
+                        This project is a final assignment for studying at Gunadarma University, discussing a website that provides 
+                        information on MSME products by creating a model with machine learning and then collaborating it into a website using React.
+                    </p>
+                  </div>
+                  <div class="project">
+                      <h2>💄 Kembang Ayu 💋</h2>
+                      <a href="https://github.com/adityaprimukti/Kembang_Ayu.git">
+                          <img src="/assets/Kembang-ayu.png" alt="Kembang-ayu">
+                        </a>
+                        
+                        <!-- Gambar tambahan yang akan disembunyikan dulu -->
+                        <div class="more-images" style="display: none;">
+                            <img src="/assets/KembangAyu2.png" alt="Kembang-ayu">
+                            <img src="/assets/KembangAyu3.png" alt="Kembang-ayu">
+                        </div>
+                        
+                        <!-- Tombol Selengkapnya -->
+                        <button class="dropbtn" onclick="toggleImages(this)">Selengkapnya ⬇️</button>
+                        <p class="caption">This project is one of the final projects in the MSIB Batch 6 activities that I have participated in at Celerates (PT. Mitra Talenta Grup), 
+                            and this website is especially helpful for women and men who like to go on vacation and need beauty treatments.</p>
+                        </div>
+
+                        <div class="project">
+                            <h2>EduYou 📖</h2>
                     <a href="https://github.com/Tirtayudha-W/Edu-You.git">
                         <img src="/assets/Eduyou.png" alt="Eduyou">
                     </a>
-                    <p class="caption">This project is one of the initial projects created in the MSIB Batch 6 activity that I have participated in at Celerates, 
-                    this website has an online learning theme that helps especially students who are lagging behind in their studies on campus.</p>
-                </div>
-                <div class="project">
-                    <h2>Calculator🧮</h2>
-                    <a href="https://github.com/Tirtayudha-W/Project_Labti">
-                        <img src="/assets/calculate.png" alt="calculate">
+                    
+                    <!-- Gambar tambahan yang akan disembunyikan dulu -->
+                    <div class="more-images" style="display: none;">
+                        <img src="/assets/Eduyou2.png" alt="Eduyou">
+                    </div>
+                    
+                    <!-- Tombol Selengkapnya -->
+                    <button class="dropbtn" onclick="toggleImages(this)">Selengkapnya ⬇️</button>
+                    <p class="caption">This project is one of the initial projects created in the MSIB Batch 6 activity that I have participated in at Celerates (PT. Mitra Talenta Grup), 
+                        this website has an online learning theme that helps especially students who are lagging behind in their studies on campus.</p>
+                    </div>
+
+                    <div class="project">
+                        <h2>Natural Beauty in Indonesia🌴</h2>
+                        <a href="https://github.com/Tirtayudha-W/Pweb-">
+                            <img src="/assets/beauty-indo.png" alt="beauty-indo">
+                        </a>
+                        <p class="caption">This project is a portfolio website that introduces the natural 
+                            beauty of Indonesia which has become a tourist spot and is being preserved.</p>
+                    </div>
+
+                    <div class="project">
+                        <h2>Calculator 🧮</h2>
+                        <a href="https://github.com/Tirtayudha-W/Project_Labti">
+                            <img src="/assets/calculate.png" alt="calculate">
                     </a>
                     <p class="caption">This project is a display of the Calculator in general in the form of a website, 
                         and is used as a requirement for selecting practicum assistants.</p>
                 </div>
                 <div class="project">
-                    <h2>Simple-ChatBot🤖</h2>
+                    <h2>Simple-ChatBot 🤖</h2>
                     <a href="https://github.com/Tirtayudha-W/Simple-chatbot">
                         <img src="/assets/simple-chatbot.png" alt="simple-chatbot">
                     </a>
                     <p class="caption">This project is a simple message with user interaction with a robot.</p>
                 </div>
+                  
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      // Ambil semua tombol dengan class .dropbtn
+                      const buttons = document.querySelectorAll(".dropbtn");
+                    
+                      buttons.forEach((button) => {
+                        button.addEventListener("click", function () {
+                          const project = button.closest(".project"); // ambil project terdekat
+                          const moreImages = project.querySelector(".more-images"); // ambil gambar tambahan di project itu
+                    
+                          if (!moreImages) return; // kalau gak ada, keluar
+                    
+                          // Toggle tampilkan / sembunyikan
+                          if (moreImages.style.display === "none" || moreImages.style.display === "") {
+                            moreImages.style.display = "flex";
+                            button.textContent = "Tutup ⬆️";
+                          } else {
+                            moreImages.style.display = "none";
+                            button.textContent = "Selengkapnya ⬇️";
+                          }
+                        });
+                      });
+                    });
+                    </script>                                       
+                  
                 <!-- Add more projects as needed -->
             </div>
             <div class="home-button">
