@@ -42,11 +42,11 @@ body {
     padding: 25px;
     margin: 25px;
     margin-block-start: 100px;
-    background-image: linear-gradient(#afe7ff, transparent);
+    background-image: linear-gradient(#6f6f6f, transparent);
     box-shadow: 20px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     width: calc(33.33% - 20px); /* Three projects per row */
-    max-width: 300px; /* Limit maximum width */
+    max-width: 200px; /* Limit maximum width */
 }
 
 .project:hover {
@@ -56,14 +56,14 @@ body {
 .project h2 {
     margin-top: 0;
     font-size: 20px;
-    color: rgb(82, 82, 82);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-align: center;
 }
 
 .project p {
     margin-top: 10px;
-    color: #666;
+    color: #fcfcfc;
     text-align: center
 }
 
@@ -96,6 +96,31 @@ body {
 .home-button a:hover {
     background-color: rgb(144, 201, 255); /* Darker color on hover */
     box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow size on hover */
+}
+
+/* Tambahkan sedikit gaya agar tombol terlihat rapi */
+.home-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home-button a {
+    display: inline-block;
+    background-color: #e4ee21;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.home-button a:hover {
+    background-color: #0056b3;
+}
+
+html {
+    scroll-behavior: smooth; /* efek scroll halus */
 }
 
 .sosmed-container {
@@ -194,8 +219,118 @@ h3 li a:hover {
     }
 }
 
+/* ========================================================= */
+/* 🔹 Skill Graph 3D Style */
+/* ========================================================= */
+.skills-container {
+    width: 80%;
+    max-width: 700px;
+    margin: 60px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: perspective(900px) rotateX(5deg);
+    transition: transform 0.4s ease;
+}
+
+.skills-container:hover {
+    transform: perspective(900px) rotateX(0deg);
+}
+
+.skills-title {
+    font-size: 32px;
+    color: #1150e4;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+}
+
+/* ==== Bar Container ==== */
+.skill-bar {
+    width: 100%;
+    height: 22px;
+    background: linear-gradient(145deg, #d1d1d1, #f5f5f5);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15),
+                2px 3px 8px rgba(0,0,0,0.25);
+    position: relative;
+    perspective: 400px;
+}
+
+/* ==== Isi Bar (3D effect) ==== */
+.skill-level {
+    height: 100%;
+    border-radius: 25px;
+    text-align: right;
+    line-height: 22px;
+    color: #fff;
+    font-size: 13px;
+    padding-right: 10px;
+    font-weight: bold;
+    transform: skewX(-15deg);
+    box-shadow: inset -2px -2px 5px rgba(255,255,255,0.3),
+                inset 2px 2px 5px rgba(0,0,0,0.3);
+    transition: width 1.5s ease-out;
+}
+
+/* ==== Warna dan Gradasi Tiap Skill ==== */
+.skill-react {
+    background: linear-gradient(145deg, #00bfff, #0077b6);
+    width: 85%;
+}
+.skill-js {
+    background: linear-gradient(145deg, #fce303, #f5a623);
+    color: #333;
+    width: 80%;
+}
+.skill-tailwind {
+    background: linear-gradient(145deg, #38bdf8, #0284c7);
+    width: 80%;
+}
+.skill-mysql {
+    background: linear-gradient(145deg, #00758f, #004d61);
+    width: 85%;
+}
+.skill-ml {
+    background: linear-gradient(145deg, #ff8c00, #ff6f00);
+    width: 80%;
+}
+.skill-figma {
+    background: linear-gradient(145deg, #a259ff, #6c2cff);
+    width: 80%;
+}
+.skill-canva {
+    background: linear-gradient(145deg, #00c4cc, #009ca1);
+    width: 85%;
+}
+
 @media only screen and (max-width: 480px) {
     .project {
         width: calc(100% - 20px); /* Single project per row on smallest screens */
+    }
+
+    .skills-container {
+        width: 90%;
+        padding: 25px;
+        transform: none;
+    }
+
+    .skills-title {
+        font-size: 26px;
     }
 }

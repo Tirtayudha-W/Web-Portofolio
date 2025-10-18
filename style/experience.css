@@ -155,7 +155,7 @@ body {
 .home-button a {
     font-size: 18px;
     color: #fff;
-    background-color: rgb(0, 94, 245);
+    background-color: rgb(218, 233, 49);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 50px;
@@ -184,6 +184,30 @@ body {
     border-radius: 50%;
     width: 35px;
     height: 35px;
+}
+
+/* === Tambahan styling untuk dropdown === */
+.select-container {
+    text-align: center;
+    margin: 20px auto 40px auto;
+}
+
+.select-container select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.select-container select:hover {
+    background: #eaeaea;
+}
+
+html {
+    scroll-behavior: smooth; /* bikin efek scroll halus */
 }
 
 /* ========================================================= */
